@@ -5,19 +5,13 @@ import { Button } from "@nextui-org/button";
 import Link from "next/link";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 
-import registerValidationSchema from "@/src/schemas/register.schema";
-import { useUserRegistration } from "@/src/hooks/auth.hook";
-import FXInput from "@/src/components/form/FXInput";
 import FXForm from "@/src/components/form/FXForm";
+import FXInput from "@/src/components/form/FXInput";
+import { useUserRegistration } from "@/src/hooks/auth.hook";
+import registerValidationSchema from "@/src/schemas/register.schema";
 
 export default function RegisterPage() {
   const { mutate: handleUserRegistration, isPending } = useUserRegistration();
-
-  //   useEffect(() => {
-  //     if (isPending) {
-  //       // Handle Loading satate
-  //     }
-  //   }, [isPending]);
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const userData = {
