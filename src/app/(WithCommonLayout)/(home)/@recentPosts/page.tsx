@@ -2,9 +2,7 @@ import { Button } from "@nextui-org/button";
 import Link from "next/link";
 
 import { getRecentPosts } from "@/src/services/RecentPosts";
-
 import { IPost } from "@/src/types";
-
 import Container from "@/src/components/ui/Container";
 import Card from "@/src/components/ui/Card";
 
